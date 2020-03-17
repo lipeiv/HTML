@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hello Ming</title>
+    <script src="vue.js"></script>
+    <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body bgcolor="blanchedalmond">
+
+    <div id='app'>
+        <zujian_all></zujian_all>
+    </div>
+
+    <script>
+        var zujian_a={ 
+            template:'<div>  局部组件A  <button v-on:click="isupload"> 上传</button>  </div>',
+            methods:{
+                isupload:function(){
+                    this.$emit('isListen','hello') // 子元素上的点击事件成功后，通过 $emit 将事件和数据传递给父组件
+                }
+            }
+        }
+
+        Vue.component('zujian_all',{
+
+            template:'<div>  全局组件   <zujian_a v-on:isListen="isShow"></zujian_a> </div>',
+            components:{
+                zujian_a
+            },
+            methods:{
+                isShow:function(data){
+                    alert(data)  //data参数接受子组件传递的值
+                }
+            }
+        })
+
+        new Vue({
+            el:'#app'
+        })
+    </script>
+</body>
+</html>

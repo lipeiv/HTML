@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Vue 示例</title>
+	<style type="text/css">
+		[v-cloak]{
+			display:none;
+		}
+	</style>
+</head>
+<body bgcolor="blanchedalmond">
+<div id="app" v-cloak>
+	<input type="text" v-model="name" placeholder="你的名字">
+	<h1>你好，{{  name  }}</h1>
+	点击次数:{{ counter}}
+	<button @click="counter++">+1</button>
+	<button @click="counter--">-1</button>
+	<button @click="counter=0">reset</button>
+</div>
+<script src="vue.js"></script>
+<script>
+	var app = new Vue({
+		el: '#app',
+		data:{
+			name: "你的名字",
+			counter:0,
+		}		
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+</head>
+<body>
+<div id="lee"></div>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	var target = $("#lee")
+	target.html("我要学习jQuery")
+		.height(60)
+		.width(160)
+		.css("border","2px solid black")
+		.css("background-color","#ddddff")
+		.css("padding",20);
+
+	$(document).ready(function(){
+	  $("button").click(function(){
+	    $("div").animate({height:'toggle'});
+	  });
+	});
+</script>
+<br>
+<button>开始动画</button>
+<p>默认情况下，所有的 HTML 元素有一个静态的位置，且是不可移动的。 
+如果需要改变为，我们需要将元素的 position 属性设置为 relative, fixed, 或 absolute!</p>
+<div style="background:#98bf21; height:100px; width:100px; position:absolute;">
+</div>
+</body>
+</html>

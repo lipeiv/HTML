@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.css">
+  <script src="jquery.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="bootstrap.js"></script>
+  <style type="text/css">
+    #div2 {
+      background: yellow;
+      text-align: center;
+    }
+    #div3 {
+      background: pink;
+    }
+    #div4 {
+      background: grey;
+    }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>我的第一个 Bootstrap 页面</h1>
+  <p>重置浏览器大小查看效果!</p> 
+</div>
+
+ 
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>第一列</h3>
+      <p>菜鸟教程</p>
+      <p>学的不仅是技术，更是梦想！！！</p>
+    </div>
+    <div class="col-sm-4" id="div3">
+      <h3>第二列</h3>
+      <p>菜鸟教程..</p>
+      <p>学的不仅是技术，更是梦想！！！</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>第三列</h3> 
+      <p>菜鸟教程..</p>
+      <p>学的不仅是技术，更是梦想！！！</p>
+    </div>
+</div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-lg-6" id="div2">class="col-lg-8"</div>
+      <div class="col-lg-6" id="div3">class="col-lg-4"</div>
+    </div>
+  </div>
+
+
+<div class="container">
+
+	<button type="button" class="btn btn-info">重置</button>
+	<button type="button" class="btn btn-info">提交</button>
+		<div class="alert alert-warning">
+			<a href="#" class="close" data-dismiss="alert">
+				&times;
+			</a>
+			<strong>警告！</strong>您的网络连接有问题。
+		</div>
+		<div class="dropdown">
+		<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" 
+				data-toggle="dropdown">
+			主题
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+			<li role="presentation">
+				<a role="menuitem" tabindex="-1" href="#">Java</a>
+			</li>
+			<li role="presentation">
+				<a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+			</li>
+			<li role="presentation">
+				<a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
+			</li>
+			<li role="presentation" class="divider"></li>
+			<li role="presentation">
+				<a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+			</li>
+			</ul>
+		</div>
+
+	<div class="progress">
+		<div class="progress-bar" role="progressbar" aria-valuenow="60"
+			 aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+			<span class="sr-only">40% 完成</span>
+		</div>
+		</div>
+</div>
+
+<div class="container">
+	<br>
+	<small>本行内容是在标签内</small><br>
+	<strong>本行内容是在标签内</strong><br>
+	<em>本行内容是在标签内，并呈现为斜体</em><br>
+	<p class="text-left">向左对齐文本</p>
+	<p class="text-center">居中对齐文本</p>
+	<p class="text-right">向右对齐文本</p>
+	<p class="text-muted">本行内容是减弱的</p>
+	<p class="text-primary">本行内容带有一个 primary class</p>
+	<p class="text-success">本行内容带有一个 success class</p>
+	<p class="text-info">本行内容带有一个 info class</p>
+	<p class="text-warning">本行内容带有一个 warning class</p>
+	<p class="text-danger">本行内容带有一个 danger class</p>	
+
+	<table class="table">
+		<caption>上下文表格布局</caption>
+		<thead>
+			<tr>
+				<th>产品</th>
+				<th>付款日期</th>
+				<th>状态</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="active">
+				<td>产品1</td>
+				<td>23/11/2013</td>
+				<td>待发货</td>
+			</tr>
+			<tr class="success">
+				<td>产品2</td>
+				<td>10/11/2013</td>
+				<td>发货中</td>
+			</tr>
+			<tr  class="warning">
+				<td>产品3</td>
+				<td>20/10/2013</td>
+				<td>待确认</td>
+			</tr>
+			<tr  class="danger">
+				<td>产品4</td>
+				<td>20/10/2013</td>
+				<td>已退货</td>
+			</tr>
+		</tbody>
+	</table>
+
+	
+	<form role="form">
+		<div class="form-group">
+			<label for="name">名称</label>
+			<input type="text" class="form-control" id="name" 
+				   placeholder="请输入名称">
+		</div>
+		<div class="form-group">
+			<label for="inputfile">文件输入</label>
+			<input type="file" id="inputfile">
+			<p class="help-block">这里是块级帮助文本的实例。</p>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox"> 请打勾
+			</label>
+		</div>
+		<button type="submit" class="btn btn-default">提交</button>
+	</form>
+
+	</div>
+	<div class="container">
+	  <h2>内嵌按钮组</h2>
+	  <p>内嵌按钮组创建下拉菜单：</p>
+	  <div class="btn-group">
+	    <button type="button" class="btn btn-primary">Apple</button>
+	    <button type="button" class="btn btn-primary">Samsung</button>
+	    <div class="btn-group">
+	      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+	      Sony <span class="caret"></span></button>
+	      <ul class="dropdown-menu" role="menu">
+	        <li><a href="#">Tablet</a></li>
+	        <li><a href="#">Smartphone</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
+
+	
+
+	<div class="container" style="padding: 100px 50px 10px;" >
+		<button type="button" class="btn btn-default" title="Popover title"  
+				data-container="body" data-toggle="popover" data-placement="left" 
+				data-content="左侧的 Popover 中的一些内容">
+			左侧的 Popover
+		</button>
+		<button type="button" class="btn btn-primary" title="Popover title"  
+				data-container="body" data-toggle="popover" data-placement="top" 
+				data-content="顶部的 Popover 中的一些内容">
+			顶部的 Popover
+		</button>
+		<button type="button" class="btn btn-success" title="Popover title"  
+				data-container="body" data-toggle="popover" data-placement="bottom" 
+				data-content="底部的 Popover 中的一些内容">
+			底部的 Popover
+		</button>
+		<button type="button" class="btn btn-warning" title="Popover title"  
+				data-container="body" data-toggle="popover" data-placement="right" 
+				data-content="右侧的 Popover 中的一些内容">
+			右侧的 Popover
+		</button>
+		<div class="panel-group" id="accordion">
+	
+	
+		
+
+
+		</div><div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" 
+						   href="#collapseOne">
+							点击我进行展开，再次点击我进行折叠。第 1 部分
+						</a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in">
+					<div class="panel-body">
+						Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
+						cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
+						vice lomo.
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" 
+						   href="#collapseTwo">
+							点击我进行展开，再次点击我进行折叠。第 2 部分
+						</a>
+					</h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse">
+					<div class="panel-body">
+						Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
+						cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
+						vice lomo.
+					</div>
+				</div>
+			</div>
+		<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" 
+						   href="#collapseThree">
+							点击我进行展开，再次点击我进行折叠。第 3 部分
+						</a>
+					</h4>
+				</div>
+	<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+				Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
+				cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
+				vice lomo.
+			</div>
+		</div>
+	</div>
+
+
+</div>
+	
+
+
+
+<script>
+	$(function () { 
+		$("[data-toggle='popover']").popover();
+	});
+</script>
+
+</body>
+</html>

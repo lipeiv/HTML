@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="angular.js"></script>
+</head>
+<body ng-app="myNoteApp" ng-controller="myNoteCtrl">
+
+<h2>我的笔记</h2>
+
+
+<textarea ng-model="message" cols="40" rows="10"></textarea>
+
+<p>
+<button ng-click="save()">保存</button>
+<button ng-click="clear()">清除</button>
+</p>
+
+<p>剩余字数: <span ng-bind="left()"></span></p>
+
+<script src="myNoteApp.js"></script>
+<script src="myNoteCtrl.js"></script>
+
+</body>
+</html>

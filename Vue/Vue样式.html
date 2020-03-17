@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue样式</title>
+	<script src="vue.js"></script>
+<style type="text/css">
+	.red{
+		color: red;
+	}
+
+	.thin{
+		font-weight: 200;
+	}
+
+	.italic{
+		font-style: italic;
+	}
+
+	.acitve{
+		letter-spacing: 0.5em;
+	}
+
+</style>
+</head>
+<body>
+<div id="app">
+	<!-- <h1 class="red thin">这是一个很大很大的h1</h1> -->
+	<h1 :class="classObj">这是一个很大很大的h1</h1>
+
+</div>
+
+<script>
+	var vm = new Vue({
+		el:"#app",
+		data:{
+			flag:false,
+			classObj:{red:true, thin:true}
+		},
+		methods:{
+			show(){
+				console.log(this.flag)
+			}
+		}
+
+	})
+
+</script>
+</body>
+</html>

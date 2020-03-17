@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS样式实验</title>
+	<style type="text/css">
+		.div0{
+			width: 100%;
+			background-image: url("th.jfif");
+			background-size: contain;
+			background-repeat: no-repeat;
+			border: solid 1px grey;
+    		height: 530px;
+    		display: flex;
+    		align-items:flex-end;
+		}
+		.div{
+			width: 33%;
+			width: 500px;
+			display: inline-block;
+			
+		}
+		.div :hover{
+			transform: translate(0px, -6px);
+			transition-property: all;
+		    transition-duration: 0.3s;
+		    transition-timing-function: ease-in-out;
+		    transition-delay: 0s;
+		}
+		
+		.r1 {
+			width: 100%;
+			border-radius: 20%;
+		}
+		.r2{
+			width: 100%;
+			border-radius: 20%;
+		}
+		.r3{
+			width: 100%;
+			border-radius: 20%;
+		}
+	</style>
+
+</head>
+<body>
+<div class="div0">
+	<div class="div"><img class="r1" src="map.jpg"></div>
+	<div class="div"><img class="r1" src="gitcolor.png"></div>
+	<div class="div"><img class="r1" src="photo.jpg"></div>
+</div>
+</body>
+</html>
