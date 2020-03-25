@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天气API</title>
+</head>
+<body>
+<h3>天气</h3>
+<ul id="box"></ul>
+<h3>小时天气</h3>
+<ul id="hours"></ul>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script>
+    $.ajax({
+        type: 'GET',
+        url: 'https://www.tianqiapi.com/api/',
+        data: 'version=v1&city=nanjing',
+        dataType: 'JSON',
+        error: function () {
+            alert('网络错误');
+        },
+        success: function (res) {
+            $('#box').append('<li>City: ' + res.city + '</li>');
+            $('#box').append('<li>Weather: ' + res.data[0].wea + '</li>');
+            $('#box').append('<li>Tips: ' + res.data[0].air_tips + '</li>');
+            // 遍历数组
+            for (var i = 0; i < res.data[0].hours.length; i++) {
+                $('#hours').append('<li>' + (i + 1) + ': 时间: ' + res.data[0].hours[i].day + ' 气温: ' + res.data[0].hours[i].tem + ' </li >');
+            }
+        }
+    });
+</script>
+</body>
+</html>
