@@ -3,15 +3,36 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
-	<script type="jQuery.js"></script>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			border: 1px solid #000;
+		}
+	</style>
+	<script type="jQuery.js">
+		
+	</script>
 	<script>
-		$(document).ready(function(){
-			$('div1').addClass("color",'red')
+		window.onload = function(ev) {
+			var div1 = document.getElementById("div2")
+			var div2 = document.getElementsByTagName("div")[0]
+			var div3 = document.getElementsByClassName("div3")[0]
+			console.log(div1)
+			console.log(div2)
+			console.log(div3)
+		}
+
+		$(function() {
+			var $div1 = $("#div2")
+			console.log($div1)
 		})
 	</script>
 </headd>
 
 <body>
-<div id="div1">我</div>
+	<div>第一个div</div>
+	<div id="div2">我</div>
+	<div class="div3">最后</div>
 </body>
 </html>
