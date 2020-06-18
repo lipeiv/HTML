@@ -21,7 +21,7 @@
 	<h3 v-if="age>18">允许24小时登录</h3>
 	<h3 v-else-if="age>14">允许8小时登录</h3>
 	<h3 v-else>允许4小时登录</h3>
-	<span title="你瞅啥？">{{ message }}</span>
+	<span :title="message">鼠标停在这字上一秒</span>
 </div>
 
 <script src="vue.js"></script>
@@ -34,11 +34,6 @@
 			age: 16,
 			message: '网站打开时间：'+ new Date().toLocaleString(),
 		},
-		computed:{
-			time: function(msg){
-				return msg + new Date().toLocaleString();
-			}
-		}
 	});
 </script>
 </body>
