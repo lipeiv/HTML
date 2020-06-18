@@ -10,6 +10,7 @@
 	</style>
 </head>
 <body bgcolor="blanchedalmond">
+
 <div id="app" v-cloak>
 	<input type="text" v-model="name" placeholder="你的名字">
 	<h1>你好，{{  name  }}</h1>
@@ -20,9 +21,7 @@
 	<h3 v-if="age>18">允许24小时登录</h3>
 	<h3 v-else-if="age>14">允许8小时登录</h3>
 	<h3 v-else>允许4小时登录</h3>
-</div>
-<div id="div2">
-	<span v-bind:title="message">{{ message }}</span>
+	<span title="你瞅啥？">{{ message }}</span>
 </div>
 
 <script src="vue.js"></script>
@@ -33,15 +32,14 @@
 			name: "你的名字",
 			counter:0,
 			age: 16,
-		}		
-	});
-
-	var div2 = new Vue({
-		el: "#div2",
-		data:{
-			message: '网站打开时间：' + new Date().toLocalString(),
+			message: '网站打开时间：'+ new Date().toLocaleString(),
+		},
+		computed:{
+			time: function(msg){
+				return msg + new Date().toLocaleString();
+			}
 		}
-	})
+	});
 </script>
 </body>
 </html>
