@@ -21,6 +21,10 @@
 	<h3 v-else-if="age>14">允许8小时登录</h3>
 	<h3 v-else>允许4小时登录</h3>
 </div>
+<div id="div2">
+	<span v-bind:title="message">{{ message }}</span>
+</div>
+
 <script src="vue.js"></script>
 <script>
 	var app = new Vue({
@@ -30,6 +34,13 @@
 			counter:0,
 			age: 16,
 		}		
+	});
+
+	var div2 = new Vue({
+		el: "#div2",
+		data:{
+			message: '网站打开时间：' + new Date().toLocalString(),
+		}
 	})
 </script>
 </body>
